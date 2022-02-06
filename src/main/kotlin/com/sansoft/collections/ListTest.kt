@@ -2,8 +2,8 @@ package com.sansoft.collections
 
 fun main() {
     val joao = Employee("João Fon", 1000.0)
-    val ashley = Employee("Ashley Muntai", 3000.0)
-    val Thor = Employee("Thor Adinho", 2000.0)
+    val ashley = Employee("Ashley Muntai", 3500.0)
+    val Thor = Employee("Thor Adinho", 2500.0)
 
     val employees = listOf(joao, ashley, Thor)
 
@@ -11,6 +11,12 @@ fun main() {
 
     println("-------------------------")
     println(employees.find { it.name == "Ashley Muntai" })
+
+    println("-------------------------")
+    employees
+        .sortedBy { it.salary }
+        .forEach{ println(it) }
+
 }
 
 data class Employee(
